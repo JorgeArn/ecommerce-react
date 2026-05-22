@@ -1,0 +1,24 @@
+.grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  Sin media queries */
+    grid-template-columns: repeat(3, 300px);
+    gap: 3rem;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2rem;
+
+}
+
+/* con media queries */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 300px;
+    }
+}

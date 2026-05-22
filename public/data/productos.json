@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cafetera Lelit Anna Pid",
+        "precio": 900000,
+        "stock": 5,
+        "imagen": "/images/anna_pid.jpg",
+        "destacado": false
+    },
+    {
+        "id": 2,
+        "nombre": "Balanza de café",
+        "precio": 15000,
+        "stock": 20,
+        "imagen": "/images/balanza.jpg",
+        "destacado": false
+    },
+    {
+        "id": 3,
+        "nombre": "Cafetera Lelit Bianca",
+        "precio": 4500000,
+        "stock": 4,
+        "imagen": "/images/bianca.jpg",
+        "destacado": false
+    },
+    {
+        "id": 4,
+        "nombre": "Cafetera Lelit MaraX",
+        "precio": 3000000,
+        "stock": 6,
+        "imagen": "/images/marax.jpg",
+        "destacado": true
+    },
+    {
+        "id": 5,
+        "nombre": "Molinillo Eureka Mignon",
+        "precio": 1150000,
+        "stock": 10,
+        "imagen": "/images/molino_eureka_mignon.jpg",
+        "destacado": true
+    },
+    {
+        "id": 6,
+        "nombre": "Molinillo Eureka 75",
+        "precio": 1300000,
+        "stock": 10,
+        "imagen": "/images/molino_eureka75.jpg",
+        "destacado": false
+    },
+    {
+        "id": 7,
+        "nombre": "Molinillo Manual",
+        "precio": 500000,
+        "stock": 15,
+        "imagen": "/images/molino_manual.jpg",
+        "destacado": false
+    },
+    {
+        "id": 8,
+        "nombre": "Pitcher 12oz",
+        "precio": 20000,
+        "stock": 50,
+        "imagen": "/images/pitcher_12oz.jpg",
+        "destacado": false
+    },
+    {
+        "id": 9,
+        "nombre": "Portafiltro 58mm",
+        "precio": 25000,
+        "stock": 40,
+        "imagen": "/images/portafiltro_58mm.jpeg",
+        "destacado": false
+    },
+    {
+        "id": 10,
+        "nombre": "Portafiltro Doble Boquilla",
+        "precio": 30000,
+        "stock": 40,
+        "imagen": "/images/portafiltro_doble_boquilla.jpg",
+        "destacado": false
+    },
+    {
+        "id": 11,
+        "nombre": "Puck Screen",
+        "precio": 12000,
+        "stock": 100,
+        "imagen": "/images/puckscreen.jpg",
+        "destacado": false
+    },
+    {
+        "id": 12,
+        "nombre": "Tamper Eléctrico Puqpress",
+        "precio": 350000,
+        "stock": 15,
+        "imagen": "/images/puqpress-tamper.jpg",
+        "destacado": true
+    },
+    {
+        "id": 13,
+        "nombre": "Tamper Madera",
+        "precio": 45000,
+        "stock": 150,
+        "imagen": "/images/tamper_madera.jpg",
+        "destacado": false
+    },
+    {
+        "id": 14,
+        "nombre": "Distribuidor WDT",
+        "precio": 15000,
+        "stock": 200,
+        "imagen": "/images/wdt.jpg",
+        "destacado": false
+    }
+]

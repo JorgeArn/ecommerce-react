@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "Ana López",
+        "email": "ana@mail.com",
+        "puesto": "CEO",
+        "foto": "/images/avatar1.avif"
+    },
+    {
+        "id": 2,
+        "nombre": "Juan Pérez",
+        "email": "juan@mail.com",
+        "puesto": "CTO",
+        "foto": "/images/avatar2.avif"
+    },
+    {
+        "id": 3,
+        "nombre": "Lucia Gómez",
+        "email": "lucia@mail.com",
+        "puesto": "UX Designer",
+        "foto": "/images/avatar3.avif"
+    }
+]

@@ -1,0 +1,21 @@
+.bannerContainer {
+  position: relative;
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.bannerButton {
+  position: absolute;
+
+  bottom: 16%;
+  left: 9%;
+
+  width: 245px;
+  height: 90px;
+
+  cursor: pointer;
+}
