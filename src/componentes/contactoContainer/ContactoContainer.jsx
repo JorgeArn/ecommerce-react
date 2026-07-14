@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
 import styles from './ContactoContainer.module.css'
 import Contacto from '../contacto/Contacto'
+
 
 function ContactoContainer() {
     const [contactos, setContactos] = useState([]);
@@ -8,15 +11,15 @@ function ContactoContainer() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('/data/nosotros.json')
-            .then(res => {
-                if(!res.ok) throw new Error("Error de carga");
-                return res.json();
-            })
-            .then(data => {
-                setContactos(data);
-                setCargando(false);
-            })
+        const equipoDB = collection(db, "equipo")
+        getDocs(equipoDB).then((resp) => {
+            setContactos(
+                resp.docs.map((doc) => {
+                    return { ...doc.data() }
+                })
+            );
+            setCargando(false);
+        })
             .catch(err => {
                 setError(err.message);
                 setCargando(false);

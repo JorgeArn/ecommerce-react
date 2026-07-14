@@ -1,0 +1,112 @@
+.carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 85vh;
+  padding: 0 1rem; /* para que no toque los bordes en mobile */
+}
+
+.carrito h1 {
+  margin-top: 2rem;
+}
+
+.carritoItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+}
+
+.carrito_vacio {
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.carrito_vacio p {
+  margin-bottom: 2rem;
+}
+
+.ver {
+  color: var(--text-main);
+  font-size: 2rem;
+}
+
+.ver:hover {
+  color: var(--text-hover);
+}
+
+.item_imagen {
+  width: 5rem;
+  flex-shrink: 0; /* que no se achique de más si el texto es largo */
+}
+
+.botones_secundarios {
+  margin: 0.5rem 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--button-bg);
+  color: white;
+  cursor: pointer;
+  flex: 1; /* botones del mismo ancho, ocupando todo el contenedor */
+}
+
+.botones_secundarios:hover {
+  background-color: var(--button-hover);
+}
+
+.botones_container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.item_info {
+  text-align: left;
+  flex: 1; /* que ocupe el espacio disponible entre imagen y botón */
+}
+
+.total {
+  font-size: 1.5rem;
+  border-top: 2px solid #7B4F3A;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+
+@media (max-width: 480px) {
+  .carritoItems {
+    flex-wrap: wrap; /* si no entra todo en fila, que baje de línea */
+    padding: 0.8rem 1rem;
+    gap: 1rem;
+  }
+
+  .item_imagen {
+    width: 4rem;
+  }
+
+  .item_info h4 {
+    font-size: 0.95rem;
+  }
+
+  .item_info p {
+    font-size: 0.85rem;
+  }
+
+  .botones_container {
+    flex-direction: column; /* apilados en mobile en vez de en fila */
+  }
+}

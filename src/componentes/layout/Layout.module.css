@@ -22,27 +22,120 @@
   }
 }
 
-/* mobile */
-@media (max-width: 768px) {
-  .header nav {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-  }
+.menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text-main);
+    padding: 0.25rem 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.menuToggleAbierto {
+    transform: rotate(90deg);
 }
 
 .nav {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
+.nav li {
+    color: var(--text-main);
+}
+
+.nav li:hover {
+  color: var(--text-hover);
+}
+
+.saludo {
+    white-space: nowrap;
+}
+
+.logoutBtn {
+    background: none;
+    border: 1px solid var(--text-main);
+    border-radius: 6px;
+    padding: 0.35rem 0.8rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.logoutBtn:hover {
+    background-color: var(--text-hover);
+    color: white;
+    border-color: var(--text-hover);
+}
+
+.cartBadge {
+    background-color: var(--text-hover);
+    color: white;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.45rem;
+    margin-left: 0.25rem;
+}
+
+/* celular */
 @media (max-width: 768px) {
-  .nav {
+  .header nav {
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
   }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding-top: 0;
+    margin-top: 0;
+    border-top: none;
+    transition: max-height 0.35s ease, opacity 0.25s ease, padding-top 0.35s ease, margin-top 0.35s ease;
+  }
+
+  .navAbierto {
+    max-height: 500px;
+    opacity: 1;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav li {
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .navAbierto li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navAbierto li:nth-child(1) { transition-delay: 0.05s; }
+  .navAbierto li:nth-child(2) { transition-delay: 0.1s; }
+  .navAbierto li:nth-child(3) { transition-delay: 0.15s; }
+  .navAbierto li:nth-child(4) { transition-delay: 0.2s; }
+  .navAbierto li:nth-child(5) { transition-delay: 0.25s; }
+  .navAbierto li:nth-child(6) { transition-delay: 0.3s; }
 }
 
 .logo {

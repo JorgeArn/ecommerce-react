@@ -3,12 +3,14 @@ import styles from "./Inicio.module.css";
 import estilos from "../itemList/ItemList.module.css";
 import { Item } from "../item/Item";
 import { Link } from "react-router-dom";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 function Inicio() {
     const [productos, setProductos] = useState([]);
     const [error, setError] = useState(null);
     const [cargando, setCargando] = useState(true);
-
+    /*
     useEffect(() => {
         fetch('/data/productos.json')
             .then((res) => {
@@ -28,6 +30,28 @@ function Inicio() {
                 setCargando(false);
             })
     }, []);
+    */
+
+    useEffect(() => {
+            const prodDB = collection(db, "productos nacionales")
+            getDocs(prodDB)
+                .then((resp) => {
+                    const productos = resp.docs.map((doc) => {
+                        return { ...doc.data() }
+                    });
+                    return productos;
+                })
+                .then((productos) => {
+                    const destacados = productos.filter(p => p.destacado);
+                    setProductos(destacados);
+                })
+                .catch((err) => {
+                    setError(err.message);
+                })
+                .finally(() => {
+                    setCargando(false);
+                })
+        }, []);
 
     if (cargando) return <p>Cargando productos, por favor espere...</p>;
 
@@ -38,12 +62,12 @@ function Inicio() {
         <section>
             <div className={styles.bannerContainer}>
                 <img
-                    src="/images/banner.png"
+                    src="/images/banner.jpeg"
                     alt="Banner Cafetera Filtrados"
                     className={styles.banner}
                 />
                 <Link
-                    to="/productos"
+                    to="/productos?categoria=Filtrados"
                     className={styles.bannerButton}
                 />
             </div>

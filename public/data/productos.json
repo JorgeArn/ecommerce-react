@@ -5,7 +5,8 @@
         "precio": 900000,
         "stock": 5,
         "imagen": "/images/anna_pid.jpg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "Cafetera espresso de caldera simple, ideal para amantes del café que recién se inician en la cafetería de especialidad."
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "precio": 15000,
         "stock": 20,
         "imagen": "/images/balanza.jpg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "Balanza para pesar con precisión tu café de especialidad."
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "precio": 4500000,
         "stock": 4,
         "imagen": "/images/bianca.jpg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "La mejor opción para los amantes del espresso y bebidas a base de espresso, quienes quieran un mejor control y precisión, con su caldera doble y control de flujo de agua en el grupo."
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "precio": 3000000,
         "stock": 6,
         "imagen": "/images/marax.jpg",
-        "destacado": true
+        "destacado": true,
+        "descripcion": "Cafetera semiprofesional, una cafetara completa que te da mucha precisión a la hora de hacer tus bebidas. "
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "precio": 1150000,
         "stock": 10,
         "imagen": "/images/molino_eureka_mignon.jpg",
-        "destacado": true
+        "destacado": true,
+        "descripcion": "Molinillo perfecto para los baristas hogareños amantes del buen café."
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "precio": 1300000,
         "stock": 10,
         "imagen": "/images/molino_eureka75.jpg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "Molinillo profesional, perfecto para tu cafeteria. Con una precisión en el molido inigualable."
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "precio": 500000,
         "stock": 15,
         "imagen": "/images/molino_manual.jpg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "Molinillo manual, ideal para los que no quieren uno electrico, pero que quieren tener la mayor precisión posible para moler café desde espressos a filtrados."
     },
     {
         "id": 8,
@@ -61,7 +68,8 @@
         "precio": 20000,
         "stock": 50,
         "imagen": "/images/pitcher_12oz.jpg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "Una de las herramientas indispensables de todo barista a la hora de hacer bebidas con leche."
     },
     {
         "id": 9,
@@ -69,7 +77,8 @@
         "precio": 25000,
         "stock": 40,
         "imagen": "/images/portafiltro_58mm.jpeg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "¿Qué es de un barista si no tiene un buen portafiltros para su cafetera espresso? un portafiltro sin fondo para ver y tener un buen control de tu extracción."
     },
     {
         "id": 10,
@@ -77,7 +86,8 @@
         "precio": 30000,
         "stock": 40,
         "imagen": "/images/portafiltro_doble_boquilla.jpg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "Ideal para dividir tus espressos dobles y preparar dos bebidas a la vez."
     },
     {
         "id": 11,
@@ -85,7 +95,8 @@
         "precio": 12000,
         "stock": 100,
         "imagen": "/images/puckscreen.jpg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "La limpieza en el grupo es una de las cosas mas importantes. Con el puckscreen evitas que te quede resto de café molido adherido a la ducha del grupo de tu cafetera."
     },
     {
         "id": 12,
@@ -93,7 +104,8 @@
         "precio": 350000,
         "stock": 15,
         "imagen": "/images/puqpress-tamper.jpg",
-        "destacado": true
+        "destacado": true,
+        "descripcion": "La rapidez que te da este tamper eléctrico a la hora de preparar tus bebidas es impresionante. Ideal para baristas profesionales que trabajan en una cafetería."
     },
     {
         "id": 13,
@@ -101,7 +113,8 @@
         "precio": 45000,
         "stock": 150,
         "imagen": "/images/tamper_madera.jpg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "Tamper metálico, pesado de 58mm, de madera. Una herramienta indispensable para los baristas profesionales y hogareños."
     },
     {
         "id": 14,
@@ -109,6 +122,7 @@
         "precio": 15000,
         "stock": 200,
         "imagen": "/images/wdt.jpg",
-        "destacado": false
+        "destacado": false,
+        "descripcion": "La distribución del café molido en el portafiltros es indispensable para romper con los grumos que quedan después de la molienda."
     }
 ]

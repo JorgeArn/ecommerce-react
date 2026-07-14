@@ -32,33 +32,6 @@
   color: var(--text-hover);
 }
 
-.stock {
-  color: gray;
-  margin-bottom: 1rem;
-}
-
-.contador {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.contador button {
-  width: 35px;
-  height: 35px;
-  border: none;
-  border-radius: 50%;
-  background-color: var(--button-bg);
-  color: var(--card-bg);
-  cursor: pointer;
-}
-
-.contador button:hover {
-  background-color: var(--button-hover);
-}
-
 .cartButton {
   width: 80%;
   padding: 0.8rem;

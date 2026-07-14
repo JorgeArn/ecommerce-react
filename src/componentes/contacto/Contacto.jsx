@@ -1,14 +1,14 @@
 import styles from './Contacto.module.css'
 
-function Contacto({ nombre, email, puesto, foto }) {
+function Contacto({ id, nombre, rol, linkedinURL, fotoURL }) {
     return (
         <div className={styles.cardContainer}>
             <div className={styles.card}>
-                <img src={foto} alt={nombre} className={styles.avatar} />
+                <img src={fotoURL} alt={nombre} className={styles.avatar} />
                 <div className={styles.cardBody}>
                     <h6>{nombre}</h6>
-                    <p>{puesto}</p>
-                    <small>{email}</small>
+                    <p>{rol}</p>
+                    <small>{linkedinURL}</small>
                 </div>
             </div>
         </div>

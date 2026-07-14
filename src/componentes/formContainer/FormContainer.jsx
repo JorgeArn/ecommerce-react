@@ -1,13 +1,18 @@
 import React from "react";
 import { useState } from "react";
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import FormNewProductos from "../formNewProductos/FormNewProductos";
 
 
 function FormContainer({ Mensaje }) {
     const [datosForm, setDatosForm] = useState({
+        id: 0,
         nombre: '',
-        precio: '',
-        stock: ''
+        precio: 0,
+        stock: 0,
+        categoria: '',
+        descripcion: '',
+        destacado: false
     });
 
     const [imagenFile, setImagenFile] = useState(null);
@@ -15,9 +20,14 @@ function FormContainer({ Mensaje }) {
     const [loading, setLoading] = useState(false);
 
     const manejarCambio = (evento) => {
-        const { name, value } = evento.target;
+        const { name, value, type, checked } = evento.target;
         setDatosForm({
-            ...datosForm, [name]: value
+            ...datosForm, [name]:
+                type === "checkbox"
+                    ? checked
+                    : type === "number"
+                        ? Number(value)
+                        : value
         });
     };
 
@@ -57,16 +67,21 @@ function FormContainer({ Mensaje }) {
                 const productoCompleto = {
                     ...datosForm,
                     // Agregamos la URL obtenida
-                    urlImagen: datosImgbb.data.url
+                    imagen: datosImgbb.data.url
                 };
-
-                // Por el momento hacemos un console.log
-                console.log('Enviando los siguientes datos COMPLETOS a la API: ', productoCompleto);
+                // LÓGICA PARA SUBIR DATOS A FIRESTORE
+                console.log('Enviando producto a Firebase: ', productoCompleto);
+                // Obtenemos la instancia de la base de datos
+                const db = getFirestore();
+                // Apuntamos a la colección "productos" (si no existe se crea)
+                const productosCollection = collection(db, "productos nacionales");
+                // Agregamos el nuevo documento a la colección
+                await addDoc(productosCollection, productoCompleto);
 
             } else {
                 throw new Error('La subida de la imagen a Imgbb falló.');
             }
-
+            // Reseteamos el formulario solo si todo fue exitoso
         } catch (error) {
             console.error("Error en el proceso de envío: ", error);
             alert("Hubo un error al subir la imagen. Por favor intenta de nuevo.");

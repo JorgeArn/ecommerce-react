@@ -8,3 +8,10 @@
     border-radius: 8px;
     gap: 16px;
 }
+
+.preview {
+    width: 120px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
