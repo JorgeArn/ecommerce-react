@@ -1,22 +1,38 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { useAuth } from "../../context/AuthContext";
+import { db } from "../../firebase/config";
 import styles from "../login/Login.module.css";
+import { doc, setDoc } from 'firebase/firestore';
+
 
 const Registro = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-    const auth = getAuth();
+    const { signup } = useAuth();
 
     const manejarSubmit = async (e) => {
-        e.preventDefaul();
+        e.preventDefault();
         setError(null); // Reseteamos cualquier error previo
 
         try {
             // Intentamos crear el nuevo usuario en firebase
-            await createUserWithEmailAndPassword(auth, email, password);
+            const credenciales = await signup(email, password);
+        
+            // Guardamos el usuario nuevo en firebase
+            await setDoc(doc(db, "usuarios", credenciales.user.uid),
+                {
+                    email,
+                    rol: "user"
+                }
+            );
+
+            console.log("Usuario creado", credenciales);
+
+            alert("Usuario creado correctamente.");
 
             // Si la creación es exitosa, lo redirigimos al inicio 
             // Firebase ya gestiona el estado de sesión automáticamente 
